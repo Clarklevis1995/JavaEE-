@@ -1,4 +1,4 @@
-package Homework1;
+package Homework2;
 
 /**
  * @program: 开课吧JavaEE

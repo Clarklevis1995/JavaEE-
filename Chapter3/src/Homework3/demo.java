@@ -1,21 +1,40 @@
 package Homework3;
 
-import java.util.Scanner;
+import java.util.ArrayList;
 
 /**
  * @program: 开课吧JavaEE
  * @description
  * @author: ClarkLevis
- * @create: 2020-12-19 12:56
+ * @create: 2020-12-22 20:08
  **/
 public class demo {
+    final int a = 0;
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        if(in.hasNextInt()){
-            int num = in.nextInt();
-            System.out.println("输入的数据为："+num);
-        }else {
-            System.out.println("输入的内容为："+in.next());
-        }
+
+        int a = 10;
+        something(new Person() {
+            @Override
+            public void say() {
+                System.out.println(a);
+            }
+        });
+
+        ArrayList<Integer> list = new ArrayList<>();
+        list.add(1);
+        list.add(1);
+        list.add(1);
+        list.add(1);
+        Integer[] result = new Integer[10];
+        result = list.toArray(result);
+
+    }
+
+    public static void something(Person p){
+        p.say();
     }
 }
+
+
+
+

@@ -31,7 +31,9 @@ public class TcpClient {
         String s = br.readLine();
         System.out.println(s);
 
-
-
+        fis.close();
+        os.close();
+        is.close();
+        socket.close();
     }
 }

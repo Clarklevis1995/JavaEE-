@@ -1,4 +1,4 @@
-package Homework3;
+package Homeword1;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

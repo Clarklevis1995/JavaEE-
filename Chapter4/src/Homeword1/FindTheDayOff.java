@@ -1,4 +1,4 @@
-package Homework3;
+package Homeword1;
 
 import java.util.Calendar;
 import java.util.Scanner;
@@ -76,6 +76,7 @@ public class FindTheDayOff {
             }
 
         }
+        System.out.println();
         System.out.println("本周休息天数有："+breakDays+"天");
         System.out.println("本周轮到周末休息是："+breakDaysInWeekends+"天");
     }

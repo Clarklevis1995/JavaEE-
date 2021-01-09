@@ -20,5 +20,10 @@ public class demo2 {
         System.out.println(b1.subtract(b2));//-
         System.out.println(b1.multiply(b2));//*
         System.out.println(b1.divide(b2,10, RoundingMode.HALF_EVEN));// /
+
+        int[] arr = new int[10];
+        int[] a = Arrays.copyOf(arr, 10);
+        String s = "";
+        s.replace('a','\0');
     }
 }

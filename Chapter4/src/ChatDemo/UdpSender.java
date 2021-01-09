@@ -16,13 +16,18 @@ import java.util.Scanner;
 public class UdpSender {
     public static void main(String[] args) throws IOException {
         DatagramSocket socket = new DatagramSocket(6666);
-        Scanner in = new Scanner(System.in);
-        String sendText = in.nextLine();
-        byte[] data = sendText.getBytes();
 
-        DatagramPacket packet = new DatagramPacket(data, 0, data.length, InetAddress.getByName("localhost"),9999);
-        socket.send(packet);
+        while(true) {
+            Scanner in = new Scanner(System.in);
+            String sendText = in.nextLine();
+            byte[] data = sendText.getBytes();
 
+            DatagramPacket packet = new DatagramPacket(data, 0, data.length, InetAddress.getByName("localhost"), 9999);
+            socket.send(packet);
+            if (sendText.equals("bye")){
+                break;
+            }
+        }
         socket.close();
 
     }

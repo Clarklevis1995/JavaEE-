@@ -22,7 +22,7 @@ public class UdpSender {
             String sendText = in.nextLine();
             byte[] data = sendText.getBytes();
 
-            DatagramPacket packet = new DatagramPacket(data, 0, data.length, InetAddress.getByName("localhost"), 9999);
+            DatagramPacket packet = new DatagramPacket(data, 0, data.length, InetAddress.getByName("192.168.124.8"), 9999);
             socket.send(packet);
             if (sendText.equals("bye")){
                 break;
